@@ -25,25 +25,25 @@ const ThoughtSchema = {
       });
   },
   createThought({ params, body }, res) {
-    console.log(body);
     Thought.create(body)
       .then(({ _id }) => {
         return User.findOneAndUpdate(
-          { _id: params.userId },
+          { _id: params.id },
           { $push: { thoughts: _id } },
           { new: true }
         );
       })
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
-          res.status(404).json({ message: "No thought found with this id." });
+          res.status(404).json({ message: "No user found with this id." });
         }
+        res.json(dbThoughtData);
       })
       .catch((err) => {
         res.json(err);
       });
   },
-  updateThought({ params }, res) {
+  updateThought({ params, body }, res) {
     Thought.findOneAndUpdate({ _id: params.id }, body, {
       new: true,
       runValidators: true,
