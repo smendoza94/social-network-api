@@ -6,12 +6,15 @@ An API for a social network web application where users can share their thoughts
 
 A social media startup requests an API for a social network app that uses a NoSQL database, so that the website can handle large amounts of unstructured data.
 
+## Video Demo
+https://drive.google.com/file/d/1q9DA2l2mXkZFJv-3nwYVw_hXgfFqpdm6/view
+
 ## Acceptance Criteria
 
-- [ ] The command can be used to invoke the application server, and the Mongoose models are synced to the MongoDB database
-- [ ] The API GET routes for users and thoughts are displayed in a formatted JSON
-- [ ] The API POST, PUT, and DELETE routes are successful in create, update, and delete users and thoughts in the database
-- [ ] The API POST and DELETE routes are able to create and delete reactions to thoughts and add and remove friends to a user’s friend list
+- [x] The command can be used to invoke the application server, and the Mongoose models are synced to the MongoDB database
+- [x] The API GET routes for users and thoughts are displayed in a formatted JSON
+- [x] The API POST, PUT, and DELETE routes are successful in create, update, and delete users and thoughts in the database
+- [x] The API POST and DELETE routes are able to create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
 ## API Routes and Models
 
